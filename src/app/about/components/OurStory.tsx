@@ -13,7 +13,7 @@ export default function OurStory() {
           </h2>
           <p className="text-black leading-relaxed font-poppins">
             Dukatech Solutions was founded with a mission to leverage technology
-            to empower Kenyan communities. From small beginnings, we've grown
+            to empower Kenyan communities. From small beginnings, we&apos;ve grown
             into a trusted partner, helping individuals, organizations, and
             businesses embrace innovation for social and economic growth.
           </p>
