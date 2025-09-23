@@ -1,109 +1,66 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence, easeOut } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
+import { ChevronRight, MousePointerClick } from "lucide-react";
 
-const images = ["/images/1.jpg", "/images/mamapesa2.jpg", "/images/d1.jpg"];
-
-export default function HeroCarousel() {
-  const [current, setCurrent] = useState(0);
-
-  // Auto-slide every 5s
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Parent + child variants for stagger
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.4, // delay between each child
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: easeOut } },
-  };
-
+export default function HeroSection() {
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={current}
-          className="absolute w-full h-full"
-          initial={{ opacity: 0, scale: 1 }}
-          animate={{ opacity: 1, scale: 1.1 }}
-          exit={{ opacity: 0, scale: 1.2 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
-        >
-          <Image
-            src={images[current]}
-            alt={`Hero ${current}`}
-            fill
-            priority
-            className="object-cover"
+    <section className="relative w-full min-h-screen text-white overflow-hidden flex items-center bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#020617]">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 w-full min-h-screen">
+        
+        {/* LEFT: Text */}
+        <div className="flex items-center px-6 sm:px-10 md:px-20 py-20">
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="space-y-6 md:space-y-8 text-center md:text-left"
+          >
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight font-michroma leading-tight">
+              Transforming Communities <br />
+              <span className="bg-gradient-to-r from-[#b8873d] to-[#2e318e] bg-clip-text text-transparent">
+                Through Technology
+              </span>
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 font-poppins max-w-lg mx-auto md:mx-0">
+              Dukatech Solutions empowers Kenyan communities by delivering
+              innovative, reliable, and impactful digital solutions.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-bold font-michroma 
+                bg-[#b8873d] shadow-lg transition-all"
+            >
+              Get Started
+              <ChevronRight className="w-5 h-5" />
+            </motion.button>
+          </motion.div>
+        </div>
+
+        {/* RIGHT: Full height background image */}
+        <div className="relative hidden md:block">
+          <img
+            src="/images/mamapesa2.jpg"
+            alt="Tech Background"
+            className="absolute inset-0 w-full h-full object-cover"
           />
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Overlay with staggered text */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center bg-black/70 text-white text-center px-10">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="show"
-          className="flex flex-col items-center"
-        >
-          <motion.h1
-            variants={itemVariants}
-            className="text-4xl md:text-6xl font-extrabold mb-10 tracking-wide font-michroma"
-          >
-            Dukatech Solutions
-          </motion.h1>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl max-w-2xl mb-10 font-poppins"
-          >
-            Empowering Kenyan Communities through Innovative Tech Solutions.
-          </motion.p>
-
-          <motion.button
-            variants={itemVariants}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="relative overflow-hidden group px-15 py-3 rounded-lg border border-[#b8873d] text-[#b8873d] hover:text-[#2e318e] font-bold font-michroma shadow-lg transition-all ease-in-out duration-500"
-          >
-            <span className="absolute inset-0 bg-[#b8873d] translate-x-[-100%] group-hover:translate-x-0 transition-transform ease-in-out duration-500"></span>
-            <span className="relative flex items-center gap-2">
-              Learn More
-              <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-1" />
-            </span>
-          </motion.button>
-        </motion.div>
+          {/* Gradient overlay for blending */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#1e1b4b]/50 to-transparent"></div>
+        </div>
       </div>
-
-      {/* Dots navigation */}
-      <div className="absolute bottom-6 w-full flex justify-center gap-2">
-        {images.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrent(idx)}
-            className={`w-3 h-3 rounded-full transition ${
-              current === idx ? "bg-white" : "bg-gray-400"
-            }`}
-          />
-        ))}
-      </div>
-    </div>
+      {/* Scroll Cue */}
+      <motion.div
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-300 z-50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2 }}
+      >
+        <MousePointerClick className="w-6 h-6 mb-2 animate-bounce" />
+        <span className="text-xs uppercase tracking-wider font-michroma">
+          Scroll
+        </span>
+      </motion.div>
+    </section>
   );
 }
