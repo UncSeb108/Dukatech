@@ -1,104 +1,86 @@
 "use client";
 
-import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Mail, MapPin } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const pathname = usePathname();
-  if (pathname === "/") return null;
 
+  if (pathname === "/") return null;
+  
   return (
-    <footer className="relative bg-black text-gray-300 pt-12 pb-10 overflow-hidden font-poppins">
-      <div className="max-w-7xl mx-auto px-6 grid gap-12 md:grid-cols-3">
-        {/* Logo & Mission */}
-        <div className="space-y-4">
-          <h2 className="text-5xl font-bold text-[#b8873d] font-michroma">
-            <span className="text-[#2e318e]">Duka</span>tech
+    <footer className="bg-[#000414] text-gray-300 py-12 font-poppins border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-0">
+        {/* Brand */}
+        <div className="space-y-2 text-center md:text-left">
+          <h2 className="text-4xl font-bold font-montserrat">
+            <span className="text-[#ffffff]">
+              Duka<span className="text-[#918947]">tech</span>
+            </span>
           </h2>
-          <p className="text-normal text-white">
-            Empowering Kenyan Communities through Innovative Tech Solutions.
+          <p className="text-sm text-gray-400 max-w-sm">
+            Empowering Kenyan communities through innovative, reliable, and
+            impactful tech solutions.
           </p>
         </div>
-        <div className="md:col-span-2 grid gap-8 md:grid-cols-3">
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold text-[#b8873d] mb-4 font-michroma">
-              Quick Links
-            </h3>
-            <ul className="space-y-2 text-sm text-white">
-              <li>
-                <a href="#" className="hover:text-[#b8873d] transition">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#b8873d] transition">
-                  Terms and Conditions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#b8873d] transition">
-                  FAQs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#b8873d] transition">
-                  Cookie Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#b8873d] transition">
-                  Accessibility
-                </a>
-              </li>
-            </ul>
-          </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold text-[#b8873d] mb-4 font-michroma">
-              Contact Us
-            </h3>
-            <ul className="text-sm space-y-3">
-              <li className="flex items-center gap-3 text-[white]">
-                <Mail size={18} className="text-[#b8873d]" />{" "}
-                dukatechsolutions@gmail.com
-              </li>
-              <li className="flex items-center gap-3 text-[white]">
-                <MapPin size={40} className="text-[#b8873d]" /> 2ND Floor,
-                Chandaria Business & Innovation Center, Kenyatta University.
-              </li>
-              <li className="flex items-center gap-3 text-[white]">
-                <Phone size={18} className="text-[#b8873d]" /> +254-743-800904
-              </li>
-            </ul>
+        {/* Contact */}
+        <div className="space-y-4 text-sm text-gray-400">
+          <h3 className="text-lg font-semibold text-[#918947] font-montserrat">
+            Contact Us
+          </h3>
+          <div className="flex items-center gap-2">
+            <Mail className="w-4 h-4 text-[#918947]" />
+            dukatechsolutions@gmail.com
           </div>
+          <div className="flex items-start gap-2">
+            <MapPin className="w-4 h-4 text-[#918947] mt-1" />
+            <span>
+              2nd Floor, Chandaria Business & Innovation Center, Kenyatta
+              University
+            </span>
+          </div>
+        </div>
 
-          {/* Social + Newsletter */}
-          <div>
-            <h3 className="text-lg font-semibold text-[#b8873d] mb-4 font-michroma">
-              Follow Us
-            </h3>
-            <div className="flex gap-3 mt-4">
-              {[Facebook, Twitter, Linkedin].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  aria-label="Social Link"
-                  className="w-10 h-10 rounded-full flex items-center justify-center border border-gray-700 text-gray-300 hover:text-white hover:bg-[#b8873d] transition duration-300"
-                >
-                  <Icon size={18} />
-                </a>
-              ))}
-            </div>
+        {/* Social Icons */}
+        <div className="text-center md:text-right space-y-4">
+          <h3 className="text-lg font-semibold text-[#918947] font-montserrat">
+            Follow Us
+          </h3>
+          <div className="flex gap-4 justify-center md:justify-end">
+            {[Facebook, Twitter, Linkedin].map((Icon, i) => (
+              <a
+                key={i}
+                href="#"
+                className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[#918947] hover:text-white transition-all duration-300"
+              >
+                <Icon size={18} />
+              </a>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800 mt-12 pt-6 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} Dukatech Solutions. All rights reserved.
+      <div className="mt-10 border-t border-gray-800 pt-6 text-center text-sm text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6 pr-20 pl-20">
+        <span>
+          © {new Date().getFullYear()} Dukatech Solutions. All rights reserved.
+        </span>
+        <div className="flex gap-4 text-xs sm:text-sm">
+          <a
+            href="#"
+            className="hover:text-[#918947] transition-colors duration-300"
+          >
+            Privacy Policy
+          </a>
+          <span className="text-gray-600">|</span>
+          <a
+            href="#"
+            className="hover:text-[#918947] transition-colors duration-300"
+          >
+            Terms & Conditions
+          </a>
+        </div>
       </div>
     </footer>
   );

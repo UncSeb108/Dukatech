@@ -44,9 +44,9 @@ export default function ProjectsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-3xl font-bold text-center mb-6 tracking-wide font-michroma text-[#b8873d]"
+        className="text-3xl font-bold text-center mb-6 tracking-wide font-montserrat text-[#918947]"
       >
-        Our <span className="text-[#2e318e]">Projects</span>
+        Our <span className="text-[#0f172a]">Projects</span>
       </motion.h2>
 
       {/* Projects Grid */}
@@ -62,7 +62,7 @@ export default function ProjectsSection() {
             key={idx}
             variants={card}
             whileHover={{ scale: 1.03 }}
-            className="bg-white rounded-lg overflow-hidden shadow hover:shadow-2xl transition duration-300 hover:-translate-y-1 border border-[#b8873d] items-stretch flex flex-col"
+            className="bg-white rounded-lg overflow-hidden shadow hover:shadow-2xl transition duration-300 hover:-translate-y-1 border border-[#918947] items-stretch flex flex-col"
           >
             <Image
               src={p.image}
@@ -72,7 +72,7 @@ export default function ProjectsSection() {
               className="w-full h-64 p-6 object-contain"
             />
             <div className="p-6 bg-[#f1f1f1] flex-1 flex flex-col">
-              <h3 className="text-xl font-semibold mb-2 font-michroma text-[#2e318e]">
+              <h3 className="text-xl font-semibold mb-2 font-montserrat text-[#0f172a]">
                 {p.title}
               </h3>
               <p className="text-black">{p.desc}</p>

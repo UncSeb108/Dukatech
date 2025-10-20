@@ -40,7 +40,7 @@ export default function ContactForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-center text-[#b8873d] mb-12 font-michroma tracking-wide"
+          className="text-3xl font-bold text-center text-[#b8873d] mb-12 font-montserrat tracking-wide"
         >
           Send Us a <span className="text-[#2e318e]">Message</span>
         </motion.h2>
@@ -104,7 +104,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={loading}
-            className={`md:col-span-2 py-3 rounded-lg font-semibold transition font-michroma ${
+            className={`md:col-span-2 py-3 rounded-lg font-semibold transition font-montserrat ${
               loading
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-[#b8873d] text-white hover:bg-[#a3742e] shadow"

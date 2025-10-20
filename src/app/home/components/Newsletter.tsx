@@ -28,7 +28,7 @@ export default function NewsletterSignup() {
   };
 
   return (
-    <section className="py-12 px-6 md:px-12 bg-[#b8873d] text-white text-center font-poppins">
+    <section className="py-12 px-6 md:px-12 bg-[#918947] text-white text-center font-poppins">
       <motion.div
         variants={container}
         initial="hidden"
@@ -39,9 +39,9 @@ export default function NewsletterSignup() {
         {/* Heading */}
         <motion.h2
           variants={item}
-          className="text-3xl md:text-4xl font-bold mb-4 font-michroma"
+          className="text-3xl md:text-4xl font-bold mb-4 font-montserrat"
         >
-          Stay <span className="text-[#2e318e]">Updated</span>
+          Stay <span className="text-[#000414]">Updated</span>
         </motion.h2>
 
         {/* Description */}
@@ -69,9 +69,9 @@ export default function NewsletterSignup() {
             type="submit"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative overflow-hidden group px-15 py-3 rounded-lg bg-[#ffffff] border border-[#ffffff] text-[#b8873d] hover:text-[#ffffff] hover:border-[#2e318e] font-bold font-michroma transition-all ease-in-out duration-500"
+            className="relative overflow-hidden group px-15 py-3 rounded-lg bg-[#ffffff] border border-[#ffffff] text-[#918947] hover:text-[#ffffff] hover:border-[#000414] font-bold font-montserrat transition-all ease-in-out duration-500"
           >
-            <span className="absolute inset-0 bg-[#2e318e] translate-x-[-100%] group-hover:translate-x-0 transition-transform ease-in-out duration-500"></span>
+            <span className="absolute inset-0 bg-[#000414] translate-x-[-100%] group-hover:translate-x-0 transition-transform ease-in-out duration-500"></span>
             <span className="relative flex items-center gap-2">
               Subscribe
               <ChevronRight className="w-8 h-8 transition-transform duration-300 group-hover:translate-x-3" />

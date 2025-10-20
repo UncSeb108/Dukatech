@@ -16,19 +16,19 @@ export default function ImpactInNumbers() {
     {
       label: "People Trained",
       value: 5000,
-      icon: <Users className="w-10 h-10 text-[#b8873d]" />,
+      icon: <Users className="w-10 h-10 text-[#0f172a]" />,
       suffix: "+",
     },
     {
       label: "Counties Impacted",
       value: 10,
-      icon: <Globe className="w-10 h-10 text-[#b8873d]" />,
+      icon: <Globe className="w-10 h-10 text-[#0f172a]" />,
       suffix: "+",
     },
     {
       label: "Businesses Supported",
       value: 200,
-      icon: <Briefcase className="w-10 h-10 text-[#b8873d]" />,
+      icon: <Briefcase className="w-10 h-10 text-[#0f172a]" />,
       suffix: "+",
     },
   ];
@@ -99,9 +99,10 @@ export default function ImpactInNumbers() {
 
   return (
     <section ref={sectionRef} className="py-12 px-6 md:px-12 bg-white">
-      <h2 className="text-3xl font-bold text-center mb-6 font-michroma text-[#b8873d] tracking-wide">
-        Our Impact in <span className="text-[#2e318e]">Numbers</span>
+      <h2 className="text-3xl font-bold text-center mb-3 font-montserrat text-[#0f172a] tracking-wide">
+        Our Impact in <span className="text-[#918947]">Numbers</span>
       </h2>
+       <div className="w-32 h-[3px] bg-[#918947] mx-auto mb-6 rounded-full"></div>
 
       <motion.div
         variants={containerVariants}
@@ -113,10 +114,10 @@ export default function ImpactInNumbers() {
           <motion.div
             key={idx}
             variants={itemVariants}
-            className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow hover:shadow-xl border border-[#b8873d] transition"
+            className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow hover:shadow-xl border border-[#918947] transition"
           >
             <div className="mb-4">{stat.icon}</div>
-            <p className="text-4xl font-bold text-[#2e318e] font-michroma">
+            <p className="text-4xl font-bold text-[#918947] font-montserrat">
               {counts[idx]}
               {stat.suffix}
             </p>

@@ -45,7 +45,7 @@ export default function MissionVisionValues() {
           }}
         >
           <div className="space-y-6 text-left p-6 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-michroma">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat">
               Our{" "}
               <span className="text-[#b8873d]">
                 {missionVision.mission.title}
@@ -73,7 +73,7 @@ export default function MissionVisionValues() {
           {/* Empty on large, hidden on mobile */}
           <div className="hidden md:block" />
           <div className="space-y-6 text-right p-6 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-michroma">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-montserrat">
               Our{" "}
               <span className="text-[#2e318e]">
                 {missionVision.vision.title}
@@ -89,7 +89,7 @@ export default function MissionVisionValues() {
       {/* Core Values */}
       <section className="py-6 text-white font-poppins">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-[#b8873d] font-michroma">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-[#b8873d] font-montserrat">
             Our <span className="text-[#2e318e]">Core Values</span>
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4 text-center">
@@ -99,7 +99,7 @@ export default function MissionVisionValues() {
                 className="bg-white border border-[#b8873d] rounded-xl p-6 shadow hover:shadow-2xl hover:scale-105 transition ease-in-out duration-300 text-center"
               >
                 {value.icon}
-                <h3 className="text-base md:text-lg font-semibold text-[#2e318e] mt-4 font-michroma">
+                <h3 className="text-base md:text-lg font-semibold text-[#2e318e] mt-4 font-montserrat">
                   {value.label}
                 </h3>
               </div>

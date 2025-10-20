@@ -14,7 +14,7 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#1e1b4b]/50 to-transparent" />
       <div className="relative z-10 text-white px-6">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 font-michroma">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 font-montserrat">
           About Dukatech Solutions
         </h1>
       </div>

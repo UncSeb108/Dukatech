@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function ContactMap() {
   return (
     <section className="h-[400px] w-full px-6 md:px-12 lg:px-20">
-        <h2 className="text-4xl text-[#b8873d] tracking-wide font-michroma font-bold text-center mb-5 ">Visit <span className="text-[#2e318e]">Us</span></h2>
+        <h2 className="text-4xl text-[#b8873d] tracking-wide font-montserrat font-bold text-center mb-5 ">Visit <span className="text-[#2e318e]">Us</span></h2>
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}

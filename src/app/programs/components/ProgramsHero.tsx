@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ProgramsHero() {
   return (
-    <section className="relative h-[50vh] flex items-center justify-center text-center font-michroma">
+    <section className="relative h-[50vh] flex items-center justify-center text-center font-montserrat">
       <Image
         src="/images/programs.jpeg"
         alt="Dukatech Programs"

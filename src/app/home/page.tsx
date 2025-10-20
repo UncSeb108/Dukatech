@@ -5,6 +5,7 @@ import Link from "next/link";
 import HeroCarousel from "./components/Hero";
 import AboutSection from "./components/About";
 import ServicesSection from "./components/Services";
+import CoreAreas from "./components/CoreAreas";
 import ImpactInNumbers from "./components/Impact";
 import CommunityStories from "./components/Community";
 import ProjectsSection from "./components/Projects";
@@ -18,6 +19,7 @@ export default function Home() {
       <HeroCarousel></HeroCarousel>
       <AboutSection></AboutSection>
       <ServicesSection></ServicesSection>
+      <CoreAreas></CoreAreas>
       <ImpactInNumbers></ImpactInNumbers>
       <CommunityStories></CommunityStories>
       <ProjectsSection></ProjectsSection>

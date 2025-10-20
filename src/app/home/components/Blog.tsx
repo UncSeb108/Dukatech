@@ -9,21 +9,21 @@ export default function BlogSection() {
       title: "How Technology is Empowering Kenyan Farmers",
       excerpt:
         "Smart irrigation and precision farming are transforming rural livelihoods across Kenya.",
-      image: "/images/blog-farm.jpg",
+      image: "/images/smart-agriculture.jpg",
       link: "#",
     },
     {
-      title: "Youth and ICT: Building Tomorrow’s Innovators",
+      title: "Youth and ICT: Building Tomorrow's Innovators",
       excerpt:
         "Our bootcamps are equipping young people with skills to thrive in the digital economy.",
-      image: "/images/blog-youth.jpg",
+      image: "/images/software.jpg",
       link: "#",
     },
     {
       title: "Sustainable Tech for Communities",
       excerpt:
         "From solar-powered IoT to e-learning centers, sustainability drives our mission.",
-      image: "/images/blog-solar.jpg",
+      image: "/images/innovation.jpg",
       link: "#",
     },
   ];
@@ -45,9 +45,9 @@ export default function BlogSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-3xl font-bold text-center mb-6 tracking-wide font-michroma text-[#b8873d]"
+        className="text-3xl font-bold text-center mb-6 tracking-wide font-montserrat text-[#918947]"
       >
-        Latest <span className="text-[#2e318e]">Insights</span>
+        Latest <span className="text-[#0f172a]">Insights</span>
       </motion.h2>
 
       {/* Blog Grid */}
@@ -61,7 +61,7 @@ export default function BlogSection() {
             viewport={{ once: true, amount: 0.3 }}
             custom={idx}
             whileHover={{ scale: 1.02 }}
-            className="bg-white rounded-lg overflow-hidden shadow hover:shadow-2xl transition duration-300 hover:-translate-y-1 border border-[#b8873d] flex flex-col h-full"
+            className="bg-white rounded-lg overflow-hidden shadow hover:shadow-2xl transition duration-300 hover:-translate-y-1 border border-[#918947] flex flex-col h-full"
           >
             {/* Image */}
             <Image
@@ -74,13 +74,13 @@ export default function BlogSection() {
 
             {/* Content */}
             <div className="p-6 flex flex-col flex-1">
-              <h3 className="text-xl font-semibold mb-2 font-michroma">
+              <h3 className="text-xl font-semibold mb-2 font-montserrat">
                 {post.title}
               </h3>
               <p className="text-black mb-4 flex-1">{post.excerpt}</p>
               <a
                 href={post.link}
-                className="text-[#b8873d] font-semibold hover:underline font-michroma"
+                className="text-[#918947] font-semibold hover:underline font-montserrat"
               >
                 Read more →
               </a>

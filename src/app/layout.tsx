@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Michroma } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -23,6 +24,12 @@ const michroma = Michroma({
   weight: "400",
 })
 
+const montserrat = Montserrat ({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["400", "700"],
+})
+
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
@@ -40,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${michroma.variable} ${poppins.variable} antialiased`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${michroma.variable} ${montserrat.variable} ${poppins.variable} antialiased`}>
       <body>
         <Navbar />
         <PathnameWrapper>{children}</PathnameWrapper>

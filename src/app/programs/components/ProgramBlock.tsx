@@ -23,7 +23,7 @@ export default function ProgramBlock({
         }`}
       >
         <div>
-          <h2 className="text-3xl font-bold text-[#2e318e] mb-6 font-michroma">
+          <h2 className="text-3xl font-bold text-[#2e318e] mb-6 font-montserrat">
             {title}
           </h2>
           <p className="text-black text-lg leading-relaxed mb-10">
@@ -31,7 +31,7 @@ export default function ProgramBlock({
           </p>
           <a
             href={href}
-            className="relative inline-flex items-center justify-center px-8 py-3 font-michroma text-sm sm:text-base font-semibold 
+            className="relative inline-flex items-center justify-center px-8 py-3 font-montserrat text-sm sm:text-base font-semibold 
              text-white tracking-wide overflow-hidden rounded-xl 
              bg-gradient-to-r from-[#b8873d] to-[#2e318e] 
              shadow-lg hover:shadow-[#b8873d]/40

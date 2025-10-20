@@ -8,7 +8,7 @@ export default function OurStory() {
     <section className="py-12 px-6 md:px-12 bg-white">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-4xl font-bold mb-6 text-[#b8873d] font-michroma tracking-wide">
+          <h2 className="text-4xl font-bold mb-6 text-[#b8873d] font-montserrat tracking-wide">
             Our <span className="text-[#2e318e]">Story</span>
           </h2>
           <p className="text-black leading-relaxed font-poppins">

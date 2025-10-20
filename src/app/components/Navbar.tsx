@@ -28,13 +28,13 @@ export default function Navbar() {
   if (pathname === "/") return null;
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#000000] text-[#b8873d] z-100 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 w-full bg-[#0f172a]/70 text-[#918947] z-100 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/home" className="flex items-center space-x-2">
-            <span className="font-bold text-3xl tracking-wide font-michroma">
-              <span className="text-[#2e318e]">Duka</span>tech
+            <span className="font-bold text-3xl tracking-wide font-montserrat">
+              <span className="text-[#ffffff]">Duka</span>tech
             </span>
           </Link>
 
@@ -44,7 +44,7 @@ export default function Navbar() {
               <Link
                 key={href}
                 href={href}
-                className="hover:text-[#2e318e] transition ease-in-out duration-300 font-poppins"
+                className="hover:text-[#ffffff] transition ease-in-out duration-300 font-poppins"
               >
                 {label}
               </Link>

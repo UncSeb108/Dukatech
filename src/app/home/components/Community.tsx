@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants, easeOut } from "framer-motion";
 
 export default function CommunityStories() {
   const stories = [
@@ -21,64 +21,78 @@ export default function CommunityStories() {
     },
   ];
 
-  const containerVariants = {
+  const sectionVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: easeOut },
+    },
   };
 
   return (
     <motion.section
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={containerVariants}
-      className="py-12 px-6 md:px-12 bg-[#f1f1f1]"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={sectionVariants}
+      className="bg-white py-20 px-6 md:px-10"
     >
-      {/* Section Title */}
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="text-3xl font-bold text-center mb-6 tracking-wide font-michroma text-[#b8873d]"
-      >
-        Community <span className="text-[#2e318e]">Stories</span>
-      </motion.h2>
-
-      {/* Stories Grid */}
+      {/* Header */}
       <motion.div
-        variants={containerVariants}
-        className="grid gap-10 md:grid-cols-2 max-w-6xl mx-auto px-6 font-poppins"
+        variants={itemVariants}
+        className="text-center mb-16 max-w-2xl mx-auto"
       >
-        {stories.map((s, idx) => (
+        <h2 className="text-4xl md:text-5xl font-extrabold font-montserrat">
+          <span className="text-[#0f172a]">Community</span>{" "}
+          <span className="text-[#918947]">Stories</span>
+        </h2>
+        <p className="text-gray-600 mt-4 text-lg font-poppins">
+          Real stories from real people whose lives have been touched by
+          technology.
+        </p>
+      </motion.div>
+
+      {/* Testimonials — now side-by-side */}
+      <motion.div
+        variants={sectionVariants}
+        className="flex flex-col md:flex-row items-start justify-center gap-12 md:gap-20 max-w-5xl mx-auto"
+      >
+        {stories.map((s, i) => (
           <motion.div
-            key={idx}
-            variants={cardVariants}
-            className="bg-white rounded-lg shadow hover:shadow-2xl transition duration-300 hover:-translate-y-1 p-8 flex flex-col md:flex-row gap-6 border border-[#b8873d]"
+            key={i}
+            variants={itemVariants}
+            className="flex flex-col items-center text-center md:text-left font-poppins flex-1"
           >
-            <Image
-              src={s.image}
-              alt={s.name}
-              width={100}
-              height={100}
-              className="rounded-lg object-cover"
-            />
+            {/* Avatar */}
+            <div className="relative w-24 h-24 mb-5">
+              <Image
+                src={s.image}
+                alt={s.name}
+                fill
+                className="rounded-full object-cover border-4 border-[#918947]/30 shadow-sm"
+              />
+            </div>
+
+            {/* Story */}
+            <p className="italic text-gray-700 text-lg leading-relaxed mb-4">
+              “{s.story}”
+            </p>
+
+            {/* Name & Role */}
             <div>
-              <p className="italic text-black">“{s.story}”</p>
-              <p className="mt-4 font-semibold font-michroma text-[#2e318e]">
+              <h4 className="text-[#0f172a] font-semibold text-lg font-montserrat">
                 {s.name}
-              </p>
-              <p className="text-sm text-[#b8873d]">{s.role}</p>
+              </h4>
+              <p className="text-sm text-[#918947]">{s.role}</p>
             </div>
           </motion.div>
         ))}

@@ -66,7 +66,7 @@ export default function ContactInfo() {
             >
               <div className="flex flex-col items-center">
                 <item.icon className="w-8 h-8 text-[#b8873d] group-hover:text-[#a3742e] mb-4" />
-                <h3 className="text-lg font-semibold text-[#2e318e] font-michroma">
+                <h3 className="text-lg font-semibold text-[#2e318e] font-montserrat">
                   {item.title}
                 </h3>
               </div>
