@@ -30,7 +30,7 @@ export default function HeroSection() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-montserrat leading-tight mb-6">
           WE ARE CREATING THE <br />
           <span className="bg-[#918947] bg-clip-text text-transparent">
-            TECH REVOLUTION
+            TECHNOLOGY REVOLUTION
           </span>{" "}
           <br /> THAT AFRICA NEEDS!
         </h1>
