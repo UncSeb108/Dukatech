@@ -6,19 +6,19 @@ import { motion, easeOut } from "framer-motion";
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "ShopOkoa",
+      title: "Shop Okoa",
       desc: "Bringing water efficiency and sustainability to rural farms.",
       image: "/images/shopokoa.jpg",
     },
     {
-      title: "MamaPesa",
+      title: "Mama Pesa",
       desc: "Empowering students in rural areas with digital skills.",
       image: "/images/mamapesa.jpg",
     },
     {
-      title: "SokoBeauty",
+      title: "Soko Beauty",
       desc: "A Pioneering database used to train Africa's first intelligent robot that can braid human hair.",
-      image: "/images/soko-beauty.png",
+      image: "/images/sokobeauty.png",
     },
   ];
 
