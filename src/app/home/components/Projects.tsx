@@ -7,12 +7,12 @@ export default function ProjectsSection() {
   const projects = [
     {
       title: "Shop Okoa",
-      desc: "Bringing water efficiency and sustainability to rural farms.",
+      desc: "Fintech infrastructure operating at the intersection of AI and blockchain technologies.",
       image: "/images/shopokoa.jpg",
     },
     {
       title: "Mama Pesa",
-      desc: "Empowering students in rural areas with digital skills.",
+      desc: "AI powered chatbot for financial literacy in local languages, and business support training for women-owned businesses.",
       image: "/images/mamapesa.jpg",
     },
     {
