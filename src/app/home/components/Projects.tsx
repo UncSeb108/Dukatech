@@ -16,9 +16,9 @@ export default function ProjectsSection() {
       image: "/images/mamapesa.jpg",
     },
     {
-      title: "Feed a Comrade",
-      desc: "Equipping young people with programming skills for the future.",
-      image: "/images/feedacomrade.jpg",
+      title: "SokoBeauty",
+      desc: "A Pioneering database used to train Africa's first intelligent robot that can braid human hair.",
+      image: "/images/soko-beauty.png",
     },
   ];
 
